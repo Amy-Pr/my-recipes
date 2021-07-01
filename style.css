@@ -1,0 +1,183 @@
+html {
+    background-color: white;
+}
+
+body {
+    background-color: #ede6e6;
+    margin: 0 auto;
+    width: 960px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #373535;
+}
+
+/*HEADER*/
+
+header {
+    height: 150px; 
+    padding-top: 20px;
+}
+
+header li:first-child { /*This is for the first list item of each ul*/
+    border-right: 1px solid #373535; 
+}
+
+ul {
+    padding: 0; /*this gets rid of the bullet points*/
+}
+
+li {
+    display: inline; /*this makes them display next to each other*/
+    padding: 10px; 
+    font-size: 16px;
+}
+
+.left {
+    width: 320px; /*One-third of the width of the body*/
+    float: left; 
+}
+
+.left ul {
+    padding-left: 30px;
+    padding-top: 90px;
+}
+
+.right {
+    width: 320px;
+    float: right; 
+}
+
+.right ul { /*selected the ul only to float it to the right of its container or div*/
+    float: right; 
+    padding-right: 30px; 
+    padding-top: 90px;
+}
+
+#logo {
+    width: 320px;
+    float: left;
+    text-align: center;
+    color: #b46363;
+    font-size: 36px;    
+}
+
+#logo p { /*This is to get rid of the default margin around the text*/
+    margin: 0; 
+}
+    
+/*CONTENT*/ 
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+/*this is some weird clearfit hack that I had to copy and paste. It has something to do with floats */ 
+
+
+#main {
+    background-image: url('images/dishes.jpg');
+    height: 438px;
+}
+
+#main p {
+    margin: 0; /*removes default margins around text*/
+    padding-top: 20px;
+    color: #b46363;
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    padding-top: 30px; 
+    text-align: center;
+}
+
+#email {
+    width: 220px;
+    height: 25px;
+    border-radius: 5px; /*This rounds the corners a bit*/
+    padding: 0; /*removes default padding around box*/
+    margin-right: 10px;
+}
+
+#click {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.box {
+    position: relative; 
+    float: left; 
+    margin: 15px 0; 
+}
+
+.box img {
+    position: relative;
+    z-index: 1; /*controls how images appear back to front, this will be behind text*/
+    margin-left: 15px;
+}
+
+.box p {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 12px;
+    text-align: center;
+    font-size: 24px; 
+    margin-left: 15px; /*to align it with the images*/
+}
+
+.middle p {
+    color: white;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #e5e0e0;
+    height: 140px;
+    padding-top: 20px; 
+}
+
+nav {
+    font-size: 16px;
+    text-align: center;
+}
+
+footer li { 
+    border-right: 1px solid #373535; 
+}
+
+footer li:last-child { /*removes border on the far right*/
+    border-right: none;
+}
+
+footer img {
+    display: block; /*puts the image on it's own line*/
+    margin: 0 auto; /*Centers the image*/
+}
